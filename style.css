@@ -67,14 +67,14 @@ p {
     /* border: 0px solid rgba(19, 17, 19, 0); */
     border-radius: 0.1rem;
     background: linear-gradient(black) content-box,
-        conic-gradient(from var(--rot), black, #CD5C9D, #CD5C9D, black) border-box;
+        conic-gradient(from var(--rot), black, #E99806, #E99806, black) border-box;
     animation: animate 5s infinite;
     animation-timing-function: linear;
     animation-play-state: paused;
     transition: all 0.3s linear;
-    box-shadow: 0 0 0px #CD5C9D;
+    box-shadow: 0 0 0px #E99806;
 
-    text-shadow: 0 0 0px #CD5C9D;
+    text-shadow: 0 0 0px #E99806;
 }
 
 .card:hover {
@@ -83,11 +83,11 @@ p {
     animation-play-state: running;
     cursor: pointer;
     border-radius: 2rem;
-    box-shadow: 0 0 70px #ED72BE;
-    color: #ED72BE;
-    text-shadow: 0 0 18px #ED72BE;
+    box-shadow: 0 0 70px #E99806;
+    color: #E99806;
+    text-shadow: 0 0 18px #E99806;
     background: linear-gradient(rgba(0, 0, 0, 0.719)) content-box,
-        conic-gradient(from var(--rot), rgba(0, 0, 0, 0.719), #CD5C9D, rgba(0, 0, 0, 0.795)) border-box;
+        conic-gradient(from var(--rot), rgba(0, 0, 0, 0.719), #E99806, rgba(0, 0, 0, 0.795)) border-box;
 
 }
 
