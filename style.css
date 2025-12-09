@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+
+@property --rot {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes animate {
+    from {
+        --rot: 0deg;
+    }
+
+    to {
+        --rot: 360deg;
+    }
+}
+
+
+
+
+
+.card {
+    max-width: 350px;
+    padding: 0px 0px;
+    /* border: 10px solid rgba(117, 0, 128, 0); */
+    /* padding-bottom: 10px; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* border: 0px solid rgba(19, 17, 19, 0); */
+    border-radius: 0.1rem;
+    background: linear-gradient(black) content-box,
+        conic-gradient(from var(--rot), black, #CD5C9D, #CD5C9D, black) border-box;
+    animation: animate 5s infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    transition: all 0.3s linear;
+    box-shadow: 0 0 0px #CD5C9D;
+
+    text-shadow: 0 0 0px #CD5C9D;
+}
+
+.card:hover {
+    padding: 10px 10px;
+    /* border: 10px solid rgba(19, 17, 19, 0); */
+    animation-play-state: running;
+    cursor: pointer;
+    border-radius: 2rem;
+    box-shadow: 0 0 70px #ED72BE;
+    color: #ED72BE;
+    text-shadow: 0 0 18px #ED72BE;
+    background: linear-gradient(rgba(0, 0, 0, 0.719)) content-box,
+        conic-gradient(from var(--rot), rgba(0, 0, 0, 0.719), #CD5C9D, rgba(0, 0, 0, 0.795)) border-box;
+
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+@media (max-width: 428px) {
+.card{
+    max-width: 240px;
+}
+.card p{
+    font-size: 0.8rem;
+}
+h1{
+    font-size: xx-large;
+}
+}
+
+@media (max-width: 321px) {
+.card{
+    max-width: 200px;
+}
+.card p{
+    font-size: 0.8rem;
+}
+h1{
+    font-size: xx-large;
+}
+}
